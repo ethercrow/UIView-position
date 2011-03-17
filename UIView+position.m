@@ -83,4 +83,34 @@
                           self.frame.size.width, newHeight);
 }
 
+- (void)addCenteredSubview:(UIView *)subview {
+    subview.rx = (int)((self.bounds.size.width - subview.frame.size.width) / 2);
+    subview.rx = (int)((self.bounds.size.height - subview.frame.size.height) / 2);
+    [self addSubview:subview];
+}
+
+- (void)moveToCenterOfSuperview {
+    if (!self.superview)
+        NSLog(@"Trying to move view inside superview before attaching. Expect weird stuff.");
+
+    self.rx = (int)((self.superview.bounds.size.width - self.frame.size.width) / 2);
+    self.ry = (int)((self.superview.bounds.size.height - self.frame.size.height) / 2);
+}
+
+- (void)centerVerticallyInSuperview
+{
+    if (!self.superview)
+        NSLog(@"Trying to move view inside superview before attaching. Expect weird stuff.");
+
+    self.ry = (int)((self.superview.bounds.size.height - self.frame.size.height) / 2);
+}
+
+- (void)centerHorizontallyInSuperview
+{
+    if (!self.superview)
+        NSLog(@"Trying to move view inside superview before attaching. Expect weird stuff.");
+
+    self.rx = (int)((self.superview.bounds.size.width - self.frame.size.width) / 2);
+}
+
 @end

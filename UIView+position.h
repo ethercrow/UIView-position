@@ -24,4 +24,9 @@
 @property (nonatomic) CGFloat width;
 @property (nonatomic) CGFloat height;
 
+// Methods for centering.
+- (void)addCenteredSubview:(UIView *)subview;
+- (void)moveToCenterOfSuperview;
+- (void)centerVerticallyInSuperview;
+- (void)centerHorizontallyInSuperview;
 @end
