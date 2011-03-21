@@ -85,7 +85,7 @@
 
 - (void)addCenteredSubview:(UIView *)subview {
     subview.rx = (int)((self.bounds.size.width - subview.frame.size.width) / 2);
-    subview.rx = (int)((self.bounds.size.height - subview.frame.size.height) / 2);
+    subview.ry = (int)((self.bounds.size.height - subview.frame.size.height) / 2);
     [self addSubview:subview];
 }
 
