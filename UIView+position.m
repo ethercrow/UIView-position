@@ -74,7 +74,7 @@
                           newWidth, self.frame.size.height);
 }
 
-- (CGFloat)frameHeight {
+- (CGFloat)height {
   return self.frame.size.height;
 }
 
